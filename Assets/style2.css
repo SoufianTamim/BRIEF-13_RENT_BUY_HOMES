@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+nav{
+    background-color: whitesmoke;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 3rem;
+    padding: 0 1rem ;
+}
+a:hover{
+    color: #5dba60;
+}
+a:active{
+    color: #5dba60;
+    opacity: .7;
+}
+nav div p {
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+nav div:first-child{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+nav div:first-child img{
+    width: 2.3rem;
+    height: 2.4rem;
+    padding-top: .2rem;
+}
+#nav a{
+    margin-right: 1.4rem;
+    font-weight: 400;
+}
+#nav{
+    padding-top: 1rem;
+    justify-content: space-between;
+    justify-content: center;
+}
+#profile img{
+    padding: .3rem 0 0 0;
+    width: 2.3rem;
+}
+a{
+    color: #000000;
+}
+
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(50, 50, 50);
+}
+footer{
+    height: 4rem;
+    background-color: #565656;
+}
+footer div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+footer div p{
+    color: whitesmoke;
+}
+footer img{
+    width: 1.5rem;
+}
+
+#filtrer{
+    background-color: #7364c7;
+    
+}
+
+
+#filter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #a8a8a8;
+    width: 100%;
+    border-radius: 5px;
+    padding: 1rem;
+}
+.tit{
+    padding: .5rem .4rem;
+}
+#filter div{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+#filter div div{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.up{
+    display: flex;
+    flex-direction: column;
+    margin: 0 .5rem;
+    padding: 0 .3rem;
+}
+input[type=number]{
+    padding: .5rem .3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+select{
+    width: 12rem;
+    height: 2.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#listings{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center ;
+
+}
+
+
+
+
+
+
+
+
+
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 20rem;
+}
+.card-header img {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 20px;
+  min-height: 15rem;
+}
+.tag {
+  background: #cccccc;
+  border-radius: 50px;
+  font-size: .8rem;
+  margin: .2rem;
+  color: #fff;
+  padding: .2rem .5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #949f00;
+
+}
+.card-body p {
+  margin: 0 0 4px;
+}
+.actions div{
+    display: flex;
+    justify-content: center;
+}
+.silver{
+    color: #A7A7A7;
+}
+
+
+ 
+/* ==================== div error  ==================== */
+.input-control.success input {
+  border: 2px solid #355c7d;
+  box-shadow: 7px 5px 5px #355c7d;
+}
+.input-control.error input {
+  border: 2px solid #c06c84;
+  box-shadow: 7px 5px 5px #c06c84;
+}
+.input-control .error {
+  padding: 5px;
+  color: #c06c84;
+  font-size: .6rem;
+  height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#btn{
+  display: flex;
+  justify-content: center;
+}
+form {
+  width: 50%;
+  margin: 2rem auto 2rem auto;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 40px;
+  font-size: 1rem;
+}
+select{
+  width: 95%;
+  background-color: white;
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  font-size: 1rem;
+  height: 2.9rem;
+}
+.submit {
+  padding: 10px;
+  margin-top: 10px;
+  width: 20%;
+  color: white;
+  background-color: #355c7d;
+  border: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  box-shadow: 5px #5c5c5c;
+}
+.submit a{
+  text-decoration: none;
+  color: white;
+}
+.submit:hover {
+  opacity: .9;
+}
+.submit:active {
+opacity: .7;
+  transform: translateY(2px);
+}
+
+.select{
+  display: flex;
+  flex-direction: column;
+}
+option:focus,
+select:focus {
+outline: 0;
+}
+select, OPTION{
+  padding: .1REM .8rem;
+  margin-left: .7rem;
+  margin: .7rem;
+}
+.input-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: .8rem !important;
+  width: 95%;
+  margin: .7rem;
+}
+input:focus {
+  outline: 0;
+}

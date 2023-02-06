@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+nav{
+  background-color: whitesmoke;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 3rem;
+  padding: 0 1rem ;
+}
+input[type=submit]{
+  color: white;
+  padding: 8px 5px;
+  margin-left: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 8rem;
+}
+a:hover{
+  color: #5dba60;
+}
+a:active{
+  color: #5dba60;
+  opacity: .7;
+}
+nav div p {
+  width: 100%;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+nav div:first-child{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+nav div:first-child img{
+  width: 2.3rem;
+  height: 2.4rem;
+  padding-top: .2rem;
+}
+#nav a{
+  margin-right: 1.4rem;
+  font-weight: 400;
+}
+#nav{
+  padding-top: 1rem;
+  justify-content: space-between;
+  justify-content: center;
+}
+#profile img{
+  padding: .3rem 0 0 0;
+  width: 2.3rem;
+}
+a{
+  color: #000000;
+}
+h1{
+  font-size: 3rem;
+  color: rgba(0, 113, 17, 0.635);
+  text-align: center;
+}
+h2{
+  font-size: 2rem;
+  color: #00b123;
+}
+#infos{
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+}
+.infoContainer{
+  width: 80%;
+  display: block;
+  margin: auto;
+  display: flex;
+  margin-top: 2rem;
+}
+hr{
+  border: .1rem solid #005e00;
+  color: rgb(0, 87, 20);
+  margin:  .5rem 0;
+}
+.infoContainer img{
+  margin-right: 3rem;
+  border-radius: 5px;
+}
+.silver{
+  color: #A7A7A7;
+}
+
+
+
