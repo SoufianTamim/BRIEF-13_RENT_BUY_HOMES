@@ -9,8 +9,10 @@ include "connect.php";
    $DATE =$_GET["date"];
    $TYPE =$_GET["type"];
    $IMAGE =$_GET["image"];
+   
 
 if ( true ){
+
    $sql = "INSERT INTO `announce` 
    (`TITTLE`, `PRICE`, `SPACE`, `DESCRIPTION`, `LOCATION`, `DATE`, `TYPE`, `IMAGE`)
    VALUES 
