@@ -1,8 +1,12 @@
 <?php 
-require "connect.php";
-if(isset($_GET["id"])){
+
+require "connect.php";//connect to the db
+if(isset($_GET["id"])){//check the id
     $ID = $_GET["id"];
-    $query = $conn->query("SELECT * FROM announce WHERE `ID` = '$ID'"); $array = $query->fetch(PDO::FETCH_ASSOC); } ?>
+    //store the request for annouce table and run it
+    $query = $conn->query("SELECT * FROM announce WHERE `ID` = '$ID'"); $array = $query->fetch(PDO::FETCH_ASSOC);
+   } 
+    ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,6 +17,7 @@ if(isset($_GET["id"])){
     <title>Document</title>
   </head>
   <body>
+<!-- ================================================== nav bar  ================================================================== -->
     <nav>
       <div>
         <a href="index.php"><img src="image/Vector.png" alt="Home Logo" /></a>
@@ -25,7 +30,9 @@ if(isset($_GET["id"])){
         <a href="#"><img src="./image/profile.png" alt="profile logo" /></a>
       </div>
     </nav>
+
     <h1><?php if(isset($_GET["id"])){echo $array["TITTLE"];} ?></h1>
+<!-- ================================================== cards infos ================================================================== -->
     
     <section class="infoContainer">
       <img src="image/<?php if(isset($_GET["id"])){echo $array["IMAGE"];} ?>.jpg" alt="" width="500">

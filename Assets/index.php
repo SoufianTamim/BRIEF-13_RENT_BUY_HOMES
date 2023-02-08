@@ -1,22 +1,25 @@
 <?php
-require 'connect.php';
+require 'connect.php';// require the connect file that connects to the db
 
-$query = $conn->query("SELECT * FROM announce");
-$fetch = $query->fetchAll(PDO::FETCH_ASSOC);
+$query = $conn->query("SELECT * FROM announce");//get data from the table annouce in the db 
+$fetch = $query->fetchAll(PDO::FETCH_ASSOC);// fetch the data from the db ascosiative to come in a proper format
 
-if(isset($_POST['filtrer'])){
+if(isset($_POST['filtrer'])){//check if the button exists  in the form 
 
   $TYPE = $_POST["Type"];
   $MinPrice = $_POST["MinPrice"];
   $MaxPrice = $_POST["MaxPrice"];
+  //store the request in a variable 
   $sql = "SELECT * FROM `announce` WHERE `PRICE` >= $MinPrice AND `PRICE` <= $MaxPrice AND `TYPE` LIKE '$TYPE'";
-  $result = $conn->query($sql);
+  $result = $conn->query($sql);//execute the request
 
-  $FilterResult = $result->fetchAll(PDO::FETCH_ASSOC);
+  $FilterResult = $result->fetchAll(PDO::FETCH_ASSOC);//fetch the filtered result as associative 
 
 
 }
+
 ?>
+<!-- =================================================== html index code  ================================================================= -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,6 +33,8 @@ if(isset($_POST['filtrer'])){
     <title>Home</title>
   </head>
   <body>
+<!-- ============================================= navbar ==================================================================== -->
+
     <nav>
       <div>
         <a href="index.php"><img src="image/Vector.png" alt="Home Logo" /></a>
@@ -45,6 +50,7 @@ if(isset($_POST['filtrer'])){
     <header>
       <h1>Your Dream <br />house is here.</h1>
     </header>
+<!-- ================================================== form of filter  ====================================================== -->
 
     <section>
       <div id="listings">
@@ -73,10 +79,12 @@ if(isset($_POST['filtrer'])){
         </div>
         </form>
       </div>
+<!-- ================================================== cards affiche ================================================================== -->
+
       <div class="cards">
         <?php
-        if ($_SERVER["REQUEST_METHOD"] == "GET") {
-          foreach($fetch as $key => $val) { 
+        if ($_SERVER["REQUEST_METHOD"] == "GET") {//check if the method is get
+          foreach($fetch as $key => $val) { //loops in the table of announce and display the in cards
                         ?>
                       <div class="card">
                         <div class="card-header">
@@ -98,8 +106,8 @@ if(isset($_POST['filtrer'])){
                       </div>
                       <?php 
             }
-          } else if ($_SERVER["REQUEST_METHOD"] == "POST") {
-              foreach($FilterResult as $key => $val) { 
+          } else if ($_SERVER["REQUEST_METHOD"] == "POST") { //check if the method is post
+              foreach($FilterResult as $key => $val) { //loops in the table of announce with filterd data and display the in cards 
                       ?>
                       <div class="card">
                         <div class="card-header">
@@ -141,6 +149,7 @@ if(isset($_POST['filtrer'])){
           </div>
       </div>
     </div>
+<!-- ================================================== footer ================================================================== -->
     <footer>
       <div>
         <div>
@@ -149,6 +158,7 @@ if(isset($_POST['filtrer'])){
         </div>
       </div>
     </footer>
+    
     <script>
       function Delete(ID) {
         document.getElementById("delete").href = "delete.php?id=" + ID;

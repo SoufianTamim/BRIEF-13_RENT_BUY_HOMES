@@ -1,7 +1,7 @@
 <?php
-include "connect.php";
+include "connect.php";// require the file connect 
 
-if (isset($_GET["submitIt"])) {
+if (isset($_GET["submitIt"])) { //check the form
    
    $ID =$_GET["id"];
    $TITTLE =$_GET["tittle"];
@@ -13,12 +13,15 @@ if (isset($_GET["submitIt"])) {
    $TYPE =$_GET["type"];
    $IMAGE =$_GET["image"];
 
+   // store the request in a variable
    $sql = "UPDATE `announce` 
    SET `TITTLE`='$TITTLE', `PRICE`='$PRICE', `SPACE`='$SPACE', `DESCRIPTION`='$DESCRIPTION', `LOCATION`='$LOCATION', `DATE`='$DATE', `TYPE`='$TYPE', `IMAGE`='$IMAGE'
    WHERE `ID`='$ID'";
 
+   //execute the request 
    $Result = $conn->query($sql)->execute();
-   
+
+   //return home wich is thee file index.php
    header("location:index.php");
 }
 

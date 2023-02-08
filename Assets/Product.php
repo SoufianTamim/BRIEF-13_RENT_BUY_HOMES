@@ -1,9 +1,10 @@
 <?php
-require 'connect.php';
+require 'connect.php';//connect to the db with the connect file 
 if(isset($_GET["id"])){
   $ID = $_GET["id"];
+  //store the request in a variable
   $query = $conn->query("SELECT * FROM announce WHERE `ID` = '$ID'");
-  $array = $query->fetch(PDO::FETCH_ASSOC);
+  $array = $query->fetch(PDO::FETCH_ASSOC); //execute the request
 }
 ?>
 <!DOCTYPE html>
@@ -18,6 +19,7 @@ if(isset($_GET["id"])){
     <title>Home</title>
   </head>
   <body>
+<!-- ================================================== navbar ================================================================== -->
     <nav>
       <div>
         <a href="index.php"><img src="image/Vector.png" alt="Home Logo" /></a>
@@ -33,6 +35,8 @@ if(isset($_GET["id"])){
     <div>
       <h1> <?php if(isset($_GET["action"])){echo $_GET["action"];} ?> Your Home <br/> and Wait for the buyer </h1>
     </div>
+<!-- ================================================== form of add and update the data from the table ================================================================== -->
+
     <section id="container">
         <form action="<?php if(isset($_GET["action"])){echo $_GET["action"];} ?>.php" method="get" id="form">
         <input type="hidden" name="id" value="<?php if(isset($_GET["id"])){echo $_GET["id"];} ?>">
@@ -74,6 +78,8 @@ if(isset($_GET["id"])){
            </div>
           </form>
     </section>
+<!-- ================================================== footer ================================================================== -->
+
     <footer>
       <div>
         <div>

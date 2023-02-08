@@ -32,11 +32,6 @@ let arr = [];
 // ================================== onclick function =============================================== //
 
 
-function Validate(){
-
-
-
-}
 function validateInputs(){
   const form = document.getElementById("form");
   const Tittle = document.getElementById("Tittle");
@@ -136,7 +131,7 @@ function validateInputs(){
 
   
   if (arr.length === 0) {
-    document.getElementById('form').submit();
+    form.submit();
   }
 
 
